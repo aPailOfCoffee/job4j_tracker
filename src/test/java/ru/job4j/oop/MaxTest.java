@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class MaxTest {
 
     @Test
-    public void whenMaxFromTwoThenFive() {
+    public void whenMaxFromTwoThenSecond() {
         Max calc = new Max();
         int result = calc.max(1, 5);
         int expected = 5;
@@ -15,7 +15,7 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMaxFromThreeThen() {
+    public void whenMaxFromThreeThenFirst() {
         Max calc = new Max();
         int result = calc.max(6, 3, 2);
         int expected = 6;
@@ -23,7 +23,7 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMaxFromFourThen() {
+    public void whenMaxFromFourThenLast() {
         Max calc = new Max();
         int result = calc.max(6, 3, 2, 7);
         int expected = 7;
