@@ -10,11 +10,11 @@ public class Matches {
         int count = 11;
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
-            String massage = count >= 3 ? " введите число от 1 до 3."
+            String message = count >= 3 ? " введите число от 1 до 3."
                     : " введите число от 1 до " + count + ".";
-            System.out.println(player + massage);
+            System.out.println(player + message);
             int matches = Integer.parseInt(input.nextLine());
-            if (matches <= count && matches <= 3) {
+            if (matches <= count && matches >= 1 && matches <= 3) {
                 turn = !turn;
                 count -= matches;
                 System.out.println("Осталось " + count + " спичек.");
