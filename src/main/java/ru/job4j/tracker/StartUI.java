@@ -20,7 +20,7 @@ public class StartUI {
                 System.out.println("=== Items ===");
                 Item[] items = tracker.findAll();
                 for (Item item: items) {
-                    System.out.println(item.toString());
+                    System.out.println(item);
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit item ===");
@@ -54,7 +54,7 @@ public class StartUI {
                 Item[] found = tracker.findByName(name);
                 if (found.length != 0) {
                     for (Item item : found) {
-                        System.out.println(item.toString());
+                        System.out.println(item);
                     }
                 } else {
                     System.out.println("Заявки с таким именем не найдены");
