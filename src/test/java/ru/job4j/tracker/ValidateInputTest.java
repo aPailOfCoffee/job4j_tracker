@@ -28,14 +28,19 @@ public class ValidateInputTest {
         assertThat(selected, is(1));
     }
 
-   /* @Test
+    @Test
     public void whenMultiValidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[]{"-1"}
+                new String[]{"0", "1", "2"}
         );
         ValidateInput input = new ValidateInput(out, in);
-    }    */
+        int selected;
+        for (int i = 0; i < 3; i++) {
+            selected = input.askInt("Enter menu:");
+            assertThat(selected, is(i));
+        }
+    }
 
     @Test
     public void whenNegativeCountInput() {
