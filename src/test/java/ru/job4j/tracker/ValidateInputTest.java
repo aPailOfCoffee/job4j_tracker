@@ -35,11 +35,12 @@ public class ValidateInputTest {
                 new String[]{"0", "1", "2"}
         );
         ValidateInput input = new ValidateInput(out, in);
-        int selected;
-        for (int i = 0; i < 3; i++) {
-            selected = input.askInt("Enter menu:");
-            assertThat(selected, is(i));
-        }
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(0));
+        selected = input.askInt("Enter menu:");
+        assertThat(selected, is(1));
+        selected = input.askInt("Enter menu:");
+        assertThat(selected, is(2));
     }
 
     @Test
