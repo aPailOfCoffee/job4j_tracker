@@ -19,7 +19,7 @@ public class PhoneDictionaryTest {
     }
 
     @Test
-    public void whenFindThenNull() {
+    public void whenFindThenEmpty() {
         PhoneDictionary dictionary = new PhoneDictionary();
         dictionary.add(new Person("Ivan", "Ivanov", "23506", "Yalta"));
         ArrayList<Person> result = dictionary.find("Tom");
