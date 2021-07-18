@@ -18,3 +18,8 @@ notifications:
       - bshestakoff@gmail.com
     on_success: never # default: change
     on_failure: always # default: always
+
+# Токен проекта
+env:
+  global:
+    - CODECOV_TOKEN='5d76b7ee-b251-4746-8a03-d36321748edf'
