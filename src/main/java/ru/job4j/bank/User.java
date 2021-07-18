@@ -2,8 +2,20 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Модель данных клиента банка.
+ * @author Bronislav Shestakov
+ * @version 1.0
+ */
 public class User {
+    /**
+     * Серия и номер паспорта.
+     * Является идентификатором клиента.
+     */
     private String passport;
+    /**
+     * ФИО клиента.
+     */
     private String username;
 
     public User(String passport, String username) {

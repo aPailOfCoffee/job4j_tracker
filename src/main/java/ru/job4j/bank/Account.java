@@ -2,8 +2,19 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Модель данных бакновского счета.
+ * @author Bronislav Shestakov
+ * @version 1.0
+ */
 public class Account {
+    /**
+     * Номер счета.
+     */
     private String requisite;
+    /**
+     * Баланс счета.
+     */
     private double balance;
 
     public Account(String requisite, double balance) {
