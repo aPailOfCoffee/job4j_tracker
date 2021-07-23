@@ -34,8 +34,7 @@ public class BankService {
      * Метод добавления счета клиенту.
      * Счет будет добавлен если: клиент есть в списке клиентов; реквизиты счета отсутствуют
      * в списке счетов данного клиента.
-     * @param passport серия и номер паспорта, для работы метода:
-     * @see #findByPassport(String passport)
+     * @param passport серия и номер паспорта.
      * @param account счет который будет добавлен в список счетов клиента.
      */
     public void addAccount(String passport, Account account) {
@@ -50,7 +49,7 @@ public class BankService {
      * Поиск осуществляется перебором всех клиентов коллецкии, сравнивая
      * их значения серии и номера паспорта.
      * @param passport серия и номер паспорта.
-     * @return найденный клиент. Если пользователь не найден - null.
+     * @return Найденный клиент. Если пользователь не найден - null.
      */
     public User findByPassport(String passport) {
         for (User user : users.keySet()) {
@@ -66,10 +65,9 @@ public class BankService {
      * банковского счета.
      * Если клиент найден по серии и номеру паспорта, осуществляется
      * поиск баковского счета в списке его счетов.
-     * @param passport серия и номер паспорта, для работы метода:
-     * @see #findByPassport(String passport)
+     * @param passport серия и номер паспорта.
      * @param requisite номер банковского счета.
-     * @return банковский счет. Если счет не найден - null.
+     * @return Банковский счет. Если счет не найден - null.
      */
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
@@ -84,8 +82,7 @@ public class BankService {
     }
 
     /**
-     * Метод перевода денежных средств с одного счета на другой. В реализации участвует:
-     * @see #findByRequisite(String, String) - для поиска счетов.
+     * Метод перевода денежных средств с одного счета на другой.
      * Перевод будет осуществлен если найдены счет списания и счет назначения, а так же баланс
      * счета списания больше либо равен сумме перевода.
      * @param srcPassport серия и номер паспорта клиента-отправителя перевода.

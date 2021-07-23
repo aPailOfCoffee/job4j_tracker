@@ -3,7 +3,7 @@ package ru.job4j.bank;
 import java.util.Objects;
 
 /**
- * Модель данных бакновского счета.
+ * Модель данных банковского счета.
  * @author Bronislav Shestakov
  * @version 1.0
  */
