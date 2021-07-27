@@ -11,7 +11,7 @@ public class StreamIntro {
                 Arrays.asList(-2, 5, 3, -99, -1, 0)
         );
         List<Integer> positiveNumbers = numbers.stream().filter(
-                number -> number >= 0
+                number -> number > 0
         ).collect(Collectors.toList());
         positiveNumbers.forEach(System.out::println);
     }
