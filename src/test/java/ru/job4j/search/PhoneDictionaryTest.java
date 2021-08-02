@@ -10,19 +10,19 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenFindByName() {
-        PhoneDictionary dictionary = new PhoneDictionary();
+        var dictionary = new PhoneDictionary();
         dictionary.add(
                 new Person("Ivan", "Ivanov", "23506", "Yalta")
         );
-        ArrayList<Person> result = dictionary.find("Ivan");
+        var result = dictionary.find("Ivan");
         assertThat(result.get(0).getName(), is("Ivan"));
     }
 
     @Test
     public void whenFindThenEmpty() {
-        PhoneDictionary dictionary = new PhoneDictionary();
+        var dictionary = new PhoneDictionary();
         dictionary.add(new Person("Ivan", "Ivanov", "23506", "Yalta"));
-        ArrayList<Person> result = dictionary.find("Tom");
+        var result = dictionary.find("Tom");
         assertThat(result, is(empty()));
     }
 }
