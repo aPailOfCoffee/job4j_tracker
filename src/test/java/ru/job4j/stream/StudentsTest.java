@@ -14,30 +14,30 @@ public class StudentsTest {
     @Test
     public void whenCollect() {
         List<Student> students = Arrays.asList(
-                new Student(10, "Ivanov"),
-                new Student(90, "Petrov"),
-                new Student(80, "Kim")
+                new Student("Ivanov", 10),
+                new Student("Petrov", 90),
+                new Student("Kim", 80)
         );
         Map<String, Student> expect = new HashMap<>();
-        expect.put("Ivanov", new Student(10, "Ivanov"));
-        expect.put("Petrov", new Student(90, "Petrov"));
-        expect.put("Kim", new Student(80, "Kim"));
+        expect.put("Ivanov", new Student("Ivanov", 10));
+        expect.put("Petrov", new Student("Petrov", 90));
+        expect.put("Kim", new Student("Kim", 80));
         assertThat(Students.collect(students), is(expect));
     }
 
     @Test
     public void whenCollectWithDuplicates() {
         List<Student> students = Arrays.asList(
-                new Student(10, "Ivanov"),
-                new Student(10, "Ivanov"),
-                new Student(90, "Petrov"),
-                new Student(80, "Kim"),
-                new Student(90, "Kim")
+                new Student("Ivanov", 10),
+                new Student("Ivanov", 10),
+                new Student("Petrov", 90),
+                new Student("Kim", 80),
+                new Student("Kim", 90)
         );
         Map<String, Student> expect = new HashMap<>();
-        expect.put("Ivanov", new Student(10, "Ivanov"));
-        expect.put("Petrov", new Student(90, "Petrov"));
-        expect.put("Kim", new Student(90, "Kim"));
+        expect.put("Ivanov", new Student("Ivanov", 10));
+        expect.put("Petrov", new Student("Petrov", 90));
+        expect.put("Kim", new Student("Kim", 90));
         assertThat(Students.collect(students), is(expect));
     }
 }
